@@ -1,0 +1,231 @@
+.customizer-wrapper {
+  max-width: 1000px;
+  margin: 40px auto;
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: white;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+}
+
+.customizer-canvas-container {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #f5f7fa 0%, #e4e9f2 100%);
+  border-radius: 40px;
+  padding: 30px;
+  box-shadow: inset 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.canvas-shadow {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  background: white;
+}
+
+.customizer-controls {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.customizer-title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 25px;
+  color: #111;
+}
+
+.step-block {
+  margin-bottom: 30px;
+}
+
+.step-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.select-row {
+  display: flex;
+  gap: 15px;
+}
+
+.premium-select {
+  flex: 1;
+  padding: 14px 18px;
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+  background-color: #fafbfc;
+  font-size: 15px;
+  font-weight: 500;
+  color: #24292e;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.premium-select:hover {
+  border-color: #d1d5da;
+  background-color: #f6f8fa;
+}
+
+.premium-select:focus {
+  outline: none;
+  border-color: #0366d6;
+  box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+}
+
+.radio-label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border: 2px solid #e1e4e8;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.radio-label span.price {
+  font-size: 13px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.radio-label input {
+  display: none;
+}
+
+.radio-label.active {
+  border-color: #111;
+  background: #fafafa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.radio-label.active span {
+  font-weight: 600;
+  color: #111;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+.upload-btn {
+  border: 2px dashed #d1d5da;
+  color: #24292e;
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.upload-btn:hover {
+  background-color: #f6f8fa;
+  border-color: #a3aab2;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+.upload-hint {
+  font-size: 13px;
+  color: #6a737d;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.checkout-area {
+  margin-top: 20px;
+  padding-top: 30px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total-price {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111;
+}
+
+.add-to-cart-btn {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.add-to-cart-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .customizer-wrapper {
+    padding: 20px;
+    gap: 30px;
+  }
+  .checkout-area {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .add-to-cart-btn {
+    width: 100%;
+  }
+}

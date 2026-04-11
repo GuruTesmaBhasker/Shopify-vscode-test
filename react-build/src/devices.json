@@ -1,0 +1,6 @@
+{
+  "Apple": ["iPhone 13", "iPhone 14", "iPhone 15", "iPhone 15 Pro", "iPhone 15 Pro Max"],
+  "Samsung": ["Galaxy S22", "Galaxy S23", "Galaxy S24", "Galaxy Z Flip 5"],
+  "Google": ["Pixel 7", "Pixel 8", "Pixel 8 Pro"],
+  "Motorola": ["Moto G Play", "Moto G Power", "Motorola Edge+"]
+}
