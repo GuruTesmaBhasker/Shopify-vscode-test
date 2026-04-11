@@ -41,6 +41,50 @@
   </head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
+    
+    <!-- 🔥 GLOBAL THEME OVERRIDE WE JUST ADDED 🔥 -->
+    <style>
+      /* Let's change the entire website background slightly to a premium off-white/gray */
+      body {
+        background-color: #f8f9fa !important;
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Let's make ALL standard Shopify buttons across the entire site have our Customizer Gradient */
+      .button, .btn, .btn--primary, button.shopify-payment-button__button {
+        background: linear-gradient(135deg, #111 0%, #333 100%) !important;
+        border-radius: 30px !important;
+        font-weight: bold !important;
+        border: none !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+        transition: transform 0.2s ease !important;
+      }
+      .button:hover, .btn:hover {
+        transform: translateY(-2px) !important;
+      }
+
+      /* Let's float a massive custom banner at the very top of ALL pages */
+      .client-global-banner {
+        background: linear-gradient(90deg, #ff007f, #ff7f00);
+        color: white;
+        text-align: center;
+        padding: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 14px;
+        position: sticky;
+        top: 0;
+        z-index: 99999;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      }
+    </style>
+    
+    <div class="client-global-banner">
+      🔥 GRAND OPENING! DESIGN YOUR DREAM PHONE CASE TODAY! 🔥
+    </div>
+    <!-- END GLOBAL THEME OVERRIDE -->
+
     {% render 'skip-to-content-link', href: '#MainContent', text: 'accessibility.skip_to_text' %}
     <div id="header-group">
       {% sections 'header-group' %}
