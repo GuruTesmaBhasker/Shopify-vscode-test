@@ -44,26 +44,96 @@
     
     <!-- 🔥 GLOBAL THEME OVERRIDE WE JUST ADDED 🔥 -->
     <style>
-      /* Let's change the entire website background slightly to a premium off-white/gray */
-      body {
-        background-color: #f8f9fa !important;
+      /* Let's change the entire website into a premium Dark Mode Cyberpunk / Neon aesthetic */
+      :root {
+        --color-base-background-1: 15, 12, 41;
+        --color-base-background-2: #302b63;
+        --gradient-base-background-1: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+        --color-base-text: 240, 240, 245;
+        --color-base-solid-button-labels: 255, 255, 255;
+      }
+      
+      /* Global Dark Background */
+      body, .gradient {
+        background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) !important;
+        background-attachment: fixed !important;
+        color: #f8f9fa !important;
         font-family: 'Inter', sans-serif !important;
       }
       
-      /* Let's make ALL standard Shopify buttons across the entire site have our Customizer Gradient */
-      .button, .btn, .btn--primary, button.shopify-payment-button__button {
-        background: linear-gradient(135deg, #111 0%, #333 100%) !important;
-        border-radius: 30px !important;
-        font-weight: bold !important;
-        border: none !important;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
-        transition: transform 0.2s ease !important;
+      /* Glassmorphic Header completely removing the white block */
+      .header, .header-wrapper, #shopify-section-header {
+        background: rgba(15, 12, 41, 0.4) !important;
+        backdrop-filter: blur(12px) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
       }
-      .button:hover, .btn:hover {
-        transform: translateY(-2px) !important;
+      .header__heading-link, .header__menu-item, .header__icon, .list-menu__item {
+        color: #ffffff !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
       }
 
-      /* Let's float a massive custom banner at the very top of ALL pages */
+      /* Hijacking the massive default "Mountain" Banner SVG */
+      .banner__media {
+        background: linear-gradient(45deg, #ff007f 0%, #302b63 100%) !important;
+        position: relative;
+        border-radius: 20px;
+        margin: 20px;
+      }
+      .banner__media::after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: url('https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-lifestyle-2.png?format=webp') center/cover;
+        opacity: 0.15;
+        mix-blend-mode: overlay;
+      }
+      .banner__media svg {
+        display: none !important; /* Hide the ugly mountain placeholder completely */
+      }
+      .banner__content {
+        background: transparent !important;
+      }
+      .banner__heading, .h1, .h2, h1, h2 {
+        background: linear-gradient(90deg, #ff007f, #ff7f00);
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        font-weight: 900 !important;
+        letter-spacing: -1px;
+        text-shadow: 0 0 40px rgba(255, 0, 127, 0.4);
+      }
+
+      /* Hover Cards for standard products */
+      .card {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        backdrop-filter: blur(10px) !important;
+        border-radius: 20px !important;
+        overflow: hidden;
+      }
+      .card__heading, .card__heading a {
+        color: white !important;
+        -webkit-text-fill-color: white !important;
+      }
+
+      /* Custom Neon Buttons for the whole website */
+      .button, .btn, .btn--primary, button.shopify-payment-button__button {
+        background: linear-gradient(135deg, #ff007f 0%, #ff7f00 100%) !important;
+        border-radius: 50px !important;
+        font-weight: 800 !important;
+        border: none !important;
+        color: white !important;
+        box-shadow: 0 10px 20px rgba(255, 0, 127, 0.3) !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+      }
+      .button:hover, .btn:hover {
+        transform: translateY(-4px) scale(1.05) !important;
+        box-shadow: 0 15px 30px rgba(255, 0, 127, 0.5) !important;
+      }
+      .button::after { display: none !important; }
+
+      /* Top Announcement Banner */
       .client-global-banner {
         background: linear-gradient(90deg, #ff007f, #ff7f00);
         color: white;
@@ -73,15 +143,13 @@
         letter-spacing: 2px;
         text-transform: uppercase;
         font-size: 14px;
-        position: sticky;
-        top: 0;
-        z-index: 99999;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        border-bottom: 1px solid rgba(255,255,255,0.2);
       }
     </style>
     
     <div class="client-global-banner">
-      🔥 GRAND OPENING! DESIGN YOUR DREAM PHONE CASE TODAY! 🔥
+      🚀 WELCOME TO THE FUTURE OF PHONE CASES 🚀
     </div>
     <!-- END GLOBAL THEME OVERRIDE -->
 
