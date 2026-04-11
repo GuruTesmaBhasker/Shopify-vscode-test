@@ -58,6 +58,7 @@
         "text_YLPk4p",
         "button_H9gpTf"
       ],
+      "disabled": true,
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
@@ -263,6 +264,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "Featured collection",
       "settings": {
         "collection": "all",
@@ -284,11 +286,11 @@
         "padding-block-end": 48
       }
     },
-    "react_customizer_YgUz7X": {
-      "type": "react-customizer",
-      "name": "Case Configurator",
+    "vanilla_case_customizer_RCJbVH": {
+      "type": "vanilla-case-customizer",
+      "name": "Vanilla Case Customizer",
       "settings": {
-        "title": "Design Your Custom Phone Case",
+        "title": "CustomCases.",
         "base_product": ""
       }
     }
@@ -296,6 +298,6 @@
   "order": [
     "hero_jVaWmY",
     "product_list_fa6P9H",
-    "react_customizer_YgUz7X"
+    "vanilla_case_customizer_RCJbVH"
   ]
 }
